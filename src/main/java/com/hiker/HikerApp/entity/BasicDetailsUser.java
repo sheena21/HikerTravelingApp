@@ -44,7 +44,7 @@ public class BasicDetailsUser {
 	@NotNull(message = "Enter your six digit pincode...")
 	private Integer pincode;
 	
-	@Column(length = 11 )
+	@Column(length = 12 )
 	@NotNull(message = "Enter your ten digit Phone No....")
 	private Integer phoneNo;
 	

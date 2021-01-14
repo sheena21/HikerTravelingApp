@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 
 @Entity
@@ -23,7 +24,7 @@ public class Trek {
 	@Column(length = 200)
 	private String description;
 	
-	
+	private String rating;
 	private Integer totalDays;
 	
 	@Column(length = 10)
@@ -32,6 +33,17 @@ public class Trek {
 	private Integer cost;
 	
 	private boolean status;
+
+	public Trek(List<Trek> list, String rating) {
+	}
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
 
 	public Integer getId() {
 		return id;
@@ -97,17 +109,21 @@ public class Trek {
 		this.status = status;
 	}
 
-	public Trek() {
-		
-	}
-	
-	
+	public Trek()
+	{}
 
-	
-	
-	
-	
-	
-	
-	
+	public Trek(Integer id, String trekName, String state, String description,
+				String rating, Integer totalDays, String weather, Integer cost, boolean status) {
+		this.id = id;
+		this.trekName = trekName;
+		this.state = state;
+		this.description = description;
+		this.rating = rating;
+		this.totalDays = totalDays;
+		this.weather = weather;
+		this.cost = cost;
+		this.status = status;
+	}
+
+
 }
